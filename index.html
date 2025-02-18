@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>Fariandi Ramadhan</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/responsive-styles.css">
+    <link rel="icon" href="/assets/img/cube.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="/assets/img/cube.svg" alt="icon">
+            <div class="nav-link">
+                <a href="#articles">Articles</a>
+                <a href="#about">About Me</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <svg class="menu-btn" viewBox="0 0 50 50">
+                <line class="line line1" x1="10" y1="15" x2="40" y2="15" stroke-width="4" stroke-linecap="round"/>
+                <line class="line line2" x1="10" y1="25" x2="40" y2="25" stroke-width="4" stroke-linecap="round"/>
+                <line class="line line3" x1="10" y1="35" x2="40" y2="35" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <div class="dropdown-mobile">
+                <a href="#articles">Articles</a>
+                <a href="#about">About Me</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+        <div class="header-title">
+            <h1>Tech News</h1>
+            <p>Gives You the Latest Technology Information</p>
+            <a href="#article" class="action-button">Read More &raquo;</a>
+        </div>
+    </header>
+    <main>
+        <div id="content">
+            <article>
+                <section>
+                    <div class="article-header">
+                        <h2 id="article">NGINX VS Traefik Comparison</h2>
+                        <p>February 17, 2025</p>
+                        <picture>
+                            <source srcset="/assets/img/vecteezy_computing.jpg" type="image/jpg">
+                            <img src="/assets/img/vecteezy_computing.webp" alt="article image header">
+                        </picture>
+                    </div>
+                    <div class="article-body">
+                        <div>
+                            <h3>What is NGINX?</h3>
+                            <p>NGINX ("engine x") is an HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP proxy server, and mail proxy server. Initially designed for handling high concurrent connections efficiently, it is widely used for serving static content, API gateway functionalities, and SSL termination.</p>
+                            <h4>Key features of Nginx</h4>
+                            <ul>
+                                <li><strong>Reverse Proxy & Load Balancer</strong> : Distributes traffic among multiple backend servers to optimize performance.</li>
+                                <li><strong>High Performance</strong> : Can handle thousands of connections with minimal resource consumption.</li>
+                                <li><strong>Static Content Serving</strong> : Excellent for serving HTML, CSS, JavaScript, and images efficiently.</li>
+                                <li><strong>SSL/TLS Termination</strong> : Handles HTTPS traffic and provides security enhancements.</li>
+                                <li><strong>Manual Configuration</strong> : Uses a configuration file (nginx.conf) that requires manual setup.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>What is Traefik?</h3>
+                            <p>Traefik is a leading modern open source reverse proxy and ingress controller that makes deploying services and APIs easy. Traefik integrates with your existing infrastructure components and configures itself automatically and dynamically.</p>
+                            <h4>Key features of Traefik</h4>
+                            <ul>
+                                <li><strong>Auto-Service Discovery</strong> : Detects services dynamically in Docker, Kubernetes, and other orchestrators.</li>
+                                <li><strong>Built-in Let’s Encrypt Support</strong> : Automatically issues and renews SSL/TLS certificates.</li>
+                                <li><strong>Dashboard and Metrics</strong> : Provides a web UI to monitor routes, traffic, and health status.</li>
+                                <li><strong>Flexible Routing</strong> : Supports path-based, domain-based, and header-based routing.</li>
+                                <li><strong>Load Balancing & Traffic Control</strong> : Includes built-in features for traffic splitting and canary deployments.</li>
+                            </ul>
+                        </div>
+                        <div class="comparison">
+                            <h3>Comparison: NGINX vs Traefik</h3>
+                            <h4>Configuration & Ease of Use</h4>
+                            <ul>
+                                <li><b>NGINX</b> : Uses a manual configuration file (nginx.conf), which offers deep customization but requires manual changes when services update.</li>
+                                <li><b>Traefik</b> : Automatically detects services and updates configurations dynamically, making it easier for microservices and containerized applications.</li>
+                            </ul>
+                            <h4>Performance & Scalability</h4>
+                            <ul>
+                                <li><b>NGINX</b> : Optimized for handling high concurrent connections, making it ideal for large-scale web applications.</li>
+                                <li><b>Traefik</b> : Slightly less performant in raw speed but excels in scalability and automation for containerized environments.</li>
+                            </ul>
+                            <h4>SSL/TLS Management</h4>
+                            <ul>
+                                <li><b>NGINX</b> : Requires manual configuration of SSL certificates (e.g., using Certbot for Let’s Encrypt).</li>
+                                <li><b>Traefik</b> : Automatically issues and renews SSL certificates, reducing maintenance effort.</li>
+                            </ul>
+                            <h4>Load Balancing</h4>
+                            <ul>
+                                <li><b>NGINX</b> : Supports advanced load balancing algorithms but requires manual configuration.</li>
+                                <li><b>Traefik</b> : Provides built-in load balancing with dynamic updates, especially useful for Kubernetes.</li>
+                            </ul>
+                            <h4>Monitoring & Dashboard</h4>
+                            <ul>
+                                <li><b>NGINX</b> : Lacks a built-in UI; requires external monitoring tools like Grafana, Prometheus, or NGINX Amplify.</li>
+                                <li><b>Traefik</b> : Includes a built-in dashboard for monitoring services, routes, and SSL certificates.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Which One Should You Choose?</h3>
+                            <h4>Choose NGINX if : </h4>
+                            <ul>
+                                <li>You need a traditional web server to host static files and applications.</li>
+                                <li>You require fine-grained control over configurations.</li>
+                                <li>You are setting up a high-performance API gateway.</li>
+                            </ul>
+                            <h4>Choose Traefik if : </h4>
+                            <ul>
+                                <li>You are running containerized applications (Docker, Kubernetes, or microservices).</li>
+                                <li>You want automated service discovery and SSL certificate management.</li>
+                                <li>You prefer an easy-to-use dashboard for monitoring traffic and routes.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Conclusion</h3>
+                            <p>
+                                NGINX and Traefik are both powerful tools, but they serve different purposes. NGINX excels in <b>performance, reliability, and traditional web hosting</b>, while Traefik is <b>ideal for modern, cloud-native environments</b> with <b>automated configurations</b>. If you are working with <b>Docker, Kubernetes, or microservices</b>, Traefik is the better choice. However, if you need a <b>high-performance reverse proxy for static content or legacy applications</b>, NGINX remains a top contender.
+                            </p>
+                            <p>
+                                Understanding your infrastructure and workload needs will help you make the right decision between NGINX and Traefik. Whichever you choose, both tools are capable of efficiently managing traffic and improving the performance of your applications.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <article>
+                <section>
+                    <h3 id="articles">Recent Articles</h3>
+                    <div class="carousel-container">
+                        <div class="carousel" id="carousel">
+                            <div class="card">
+                                <img src="assets/img/vecteezy_computing.webp" alt="article 1">
+                                <a href="#" class="title">Dynamic Scaling with Cloud Computing</a>
+                                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit hic reprehenderit consectetur, est libero illo assumenda nobis fugit recusandae molestiae cum optio? Temporibus tempora, ad reprehenderit unde recusandae placeat.</p>
+                            </div>
+                            <div class="card">
+                                <img src="assets/img/vecteezy_abstract.jpg" alt="article 2">
+                                <a href="#" class="title">Will AI Replace Human Jobs?</a>
+                                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit hic reprehenderit consectetur, est libero illo assumenda nobis fugit recusandae molestiae cum optio? Temporibus tempora, ad reprehenderit unde recusandae placeat.</p>
+                            </div>
+                            <div class="card">
+                                <img src="assets/img/traefik.svg" alt="article 3">
+                                <a href="#" class="title">Traefik, NGINX New Challenger</a>
+                                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit hic reprehenderit consectetur, est libero illo assumenda nobis fugit recusandae molestiae cum optio? Temporibus tempora, ad reprehenderit unde recusandae placeat.</p>
+                            </div>
+                            <div class="card">
+                                <img src="assets/img/nginx-svgrepo-com.svg" alt="article 3">
+                                <a href="#" class="title">Is NGINX Deprecated ?</a>
+                                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, velit hic reprehenderit consectetur, est libero illo assumenda nobis fugit recusandae molestiae cum optio? Temporibus tempora, ad reprehenderit unde recusandae placeat.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="controls">
+                            <div class="control-btn" id="prevBtn">&lt;</div>
+                            <div class="control-btn" id="nextBtn">&gt;</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3 id="about">About Writer</h3>
+                    <div class="profile">
+                        <img src="assets/img/writer-pic.png" alt="writer">
+                        <p class="name">Fariandi Ramadhan</p>
+                        <p class="desc">UI / UX Designer | Web Developer</p>
+                        <cite class="quote">Everyone is an expert in their respective fields, keep going, wish you the best</cite>
+                    </div>
+                </section>
+                <section>
+                    <h3 id="contact">Contact</h3>
+                    <div class="contact">
+                        <p>Interested in working together? Contact me by social media or E-mail</p>
+                        <p class="email">JohnDoe@example.com</p>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <aside>
+            <div class="aside-identity">
+                <p>References :</p>
+                <a class="item" href="https://nginx.org/en/" target="_blank">
+                    <img src="/assets/img/nginx-svgrepo-com.svg" alt="nginx logo">
+                    <span>Nginx</span>
+                </a>
+                <a class="item" href="https://traefik.io/" target="_blank">
+                    <img src="/assets/img/traefik.svg" alt="traefik logo">
+                    <span>Traefik</span>
+                </a>
+            </div>
+            <div class="aside-identity categories">
+                <p>Categories :</p>
+                <span>
+                    <a href="#" target="_blank">Back-End</a>
+                </span>
+            </div>
+            <div class="aside-identity tags">
+                <p>Tags :</p>
+                <span>
+                    <a href="#" target="_blank">#Website</a>
+                </span>
+                <span>
+                    <a href="#" target="_blank">#Load Balancer</a>
+                </span>
+                <span>
+                    <a href="#" target="_blank">#Reverse Proxy</a>
+                </span>
+                <span>
+                    <a href="#" target="_blank">#Server</a>
+                </span>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>My Social Media</p>
+        <div class="socials">
+            <a href="https://github.com/FariandiRamadhan" target="_blank" aria-label="My Github">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/fari.rmdhn_/" target="_blank" aria-label="My Instagram">
+                <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/fariandi-ramadhan/" target="_blank" aria-label="My Linkedin">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                </svg>
+            </a>
+        </div>
+        <p class='copyright'>@2025 Fariandi Ramadhan. All Rights Reserved</p>
+    </footer>
+    <noscript>You should activate Javascript to display web correctly</noscript>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
